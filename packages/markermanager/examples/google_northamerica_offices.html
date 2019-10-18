@@ -24,7 +24,7 @@
         };
         map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-        mgr = new google.maps.plugins.markermanager.MarkerManager(map);
+        mgr = new google.maps.plugins.markermanager.MarkerManager(map, {});
 
         google.maps.event.addListener(mgr, "loaded", function() {
           setupOfficeMarkers();

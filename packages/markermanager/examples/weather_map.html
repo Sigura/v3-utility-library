@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Google Maps API Example - Random Weather Map</title>
 
-    <script type="text/javascript" src="../dist/markermanager.dev.js"></script>
+    <script type="text/javascript" src="../dist/markermanager.min.js"></script>
     <script type="text/javascript">
       var IMAGES = ["sun", "rain", "snow", "storm"];
       var ICONS = [];
@@ -82,7 +82,7 @@
 
       function setupWeatherMarkers() {
         console.log(google);
-        mgr = new google.maps.plugins.markermanager.MarkerManager(map);
+        mgr = new google.maps.plugins.markermanager.MarkerManager(map, {});
 
         google.maps.event.addListener(mgr, "loaded", function() {
           mgr.addMarkers(getWeatherMarkers(20), 3);
